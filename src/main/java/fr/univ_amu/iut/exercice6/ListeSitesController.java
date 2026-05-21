@@ -30,18 +30,31 @@ public class ListeSitesController {
     //
     // 1. Incrémenter compteurDemo (1, 2, 3, ...).
     // 2. Construire une SiteCarte et alimenter ses propriétés :
-    //      - numéro de carré : "Carré " + (640000 + compteurDemo) (format à 6 chiffres garanti
-    //        par la base 640000)
-    //      - nom convivial : "📍 Site de démonstration #" + compteurDemo
-    //      - nombre de points : (compteurDemo % 3) + 1
-    //      - nombre de passages : compteurDemo * 2
-    //      - jours depuis dernier passage : compteurDemo * 4 (0 -> 4 -> 8 -> 12 -> 16 -> ...)
-    //        ce qui fait passer les badges du frais à l'orange puis au gris au fil des ajouts.
-    // 3. Ajouter la carte au début (index 0) du VBox pour que les nouveaux sites apparaissent en
-    //    haut, comme dans un flux d'activité.
+    // - numéro de carré : "Carré " + (640000 + compteurDemo) (format à 6 chiffres
+    // garanti
+    // par la base 640000)
+    // - nom convivial : "📍 Site de démonstration #" + compteurDemo
+    // - nombre de points : (compteurDemo % 3) + 1
+    // - nombre de passages : compteurDemo * 2
+    // - jours depuis dernier passage : compteurDemo * 4 (0 -> 4 -> 8 -> 12 -> 16 ->
+    // ...)
+    // ce qui fait passer les badges du frais à l'orange puis au gris au fil des
+    // ajouts.
+    // 3. Ajouter la carte au début (index 0) du VBox pour que les nouveaux sites
+    // apparaissent en
+    // haut, comme dans un flux d'activité.
     // 4. Retourner conteneurCartes.getChildren().size().
-    int total = 0;
-    return total;
+    compteurDemo = compteurDemo + 1;
+
+    SiteCarte carte = new SiteCarte();
+    carte.setNumeroCarre("Carré " + (640000 + compteurDemo));
+    carte.setNomConvivial("📍 Site de démonstration #" + compteurDemo);
+    carte.setNombrePoints((compteurDemo % 3) + 1);
+    carte.setNombrePassages(compteurDemo * 2);
+    carte.setJoursDepuisDernierPassage(compteurDemo * 4);
+
+    conteneurCartes.getChildren().add(0, carte);
+    return conteneurCartes.getChildren().size();
   }
 
   /** Retourne le nombre courant de cartes affichées (utile pour les tests). */
