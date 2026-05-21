@@ -5,7 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -35,7 +34,6 @@ class SiteCarteTest {
     stage.show();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(1)
   void le_numero_de_carre_est_affiche_dans_la_carte(FxRobot robot) {
@@ -46,7 +44,6 @@ class SiteCarteTest {
         .isEqualTo("Carré 640380");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(2)
   void le_nom_convivial_est_affiche_dans_la_carte(FxRobot robot) {
@@ -57,7 +54,6 @@ class SiteCarteTest {
         .isEqualTo("📍 Étang de la Tuilière");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(3)
   void les_compteurs_de_points_d_ecoute_et_de_passages_sont_affiches(FxRobot robot) {
@@ -76,7 +72,6 @@ class SiteCarteTest {
         .contains("7 passages");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(4)
   void la_carte_avec_moins_de_sept_jours_affiche_un_badge_vert(FxRobot robot) {
@@ -91,7 +86,6 @@ class SiteCarteTest {
         .isEqualTo("Il y a 2j");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(5)
   void la_carte_entre_sept_et_trente_jours_affiche_un_badge_orange(FxRobot robot) {
@@ -103,7 +97,6 @@ class SiteCarteTest {
         .doesNotContain("badge-fresh", "badge-cold");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(6)
   void la_carte_au_dela_de_trente_jours_affiche_un_badge_gris(FxRobot robot) {
@@ -115,7 +108,6 @@ class SiteCarteTest {
         .doesNotContain("badge-fresh", "badge-stale");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(7)
   void la_carte_sans_aucun_passage_affiche_un_badge_gris_avec_le_texte_jamais_utilise(
@@ -130,7 +122,6 @@ class SiteCarteTest {
         .isEqualTo("Jamais utilisé");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(8)
   void changer_le_nombre_de_jours_met_a_jour_la_classe_css_du_badge(FxRobot robot) {
