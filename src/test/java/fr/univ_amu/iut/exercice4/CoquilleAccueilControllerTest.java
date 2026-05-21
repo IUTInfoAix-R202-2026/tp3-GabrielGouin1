@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -43,7 +42,6 @@ class CoquilleAccueilControllerTest {
         .orElse(null);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(1)
   void le_titre_central_affiche_mes_sites_de_suivi_au_demarrage(FxRobot robot) {
@@ -56,7 +54,6 @@ class CoquilleAccueilControllerTest {
         .isEqualTo("Mes sites de suivi");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(2)
   void le_label_de_statut_est_present_dans_la_barre_de_statut(FxRobot robot) {
@@ -66,7 +63,6 @@ class CoquilleAccueilControllerTest {
         .isNotNull();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(3)
   void le_menu_bar_contient_les_menus_fichier_et_affichage(FxRobot robot) {
@@ -80,7 +76,6 @@ class CoquilleAccueilControllerTest {
         .contains("Fichier", "Affichage");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(4)
   void cliquer_sur_le_menu_mes_sites_met_le_titre_central_a_mes_sites_de_suivi(FxRobot robot) {
@@ -93,7 +88,6 @@ class CoquilleAccueilControllerTest {
         .isEqualTo("Mes sites de suivi");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(5)
   void cliquer_sur_le_menu_importer_met_le_titre_central_a_importer_une_nuit(FxRobot robot) {
@@ -108,7 +102,6 @@ class CoquilleAccueilControllerTest {
         .isEqualTo("Importer une nuit");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(6)
   void cliquer_sur_le_menu_vue_tabulaire_met_le_titre_central_a_vue_tabulaire_des_passages(
@@ -122,7 +115,6 @@ class CoquilleAccueilControllerTest {
         .isEqualTo("Vue tabulaire des passages");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(7)
   void cliquer_sur_le_menu_parametres_met_le_titre_central_a_parametres_de_l_application(
@@ -136,7 +128,6 @@ class CoquilleAccueilControllerTest {
         .isEqualTo("Paramètres de l'application");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(8)
   void cliquer_sur_un_menu_met_a_jour_le_label_de_la_barre_de_statut(FxRobot robot) {
