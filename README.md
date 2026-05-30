@@ -605,9 +605,9 @@ Les bonus sont **facultatifs** et **non notés** : à faire si vous avez termin�
 
 ![Maquette ThemeToggle](src/main/resources/assets/maquette_theme_toggle.svg)
 
-**Le rendu final** (à comparer avec la maquette ci-dessus) :
+**Le rendu final** (thème clair et thème sombre, comme la maquette — seule la feuille CSS active change) :
 
-<img alt="Résultat attendu - Bonus 8 : une fenêtre avec un ToggleButton qui bascule le thème clair / sombre" src=".github/assets/apercu-bonus8-theme.png" width="480"/>
+<img alt="Bonus 8 - thème clair : bouton « Mode sombre » en haut à droite" src=".github/assets/apercu-bonus8-theme.png" width="360"/> <img alt="Bonus 8 - thème sombre : bouton « Mode clair », fond bleu nuit, texte clair" src=".github/assets/apercu-bonus8-theme-sombre.png" width="360"/>
 
 **Lien SAÉ** : l'objectif qualité **O2** (Facilité d'apprentissage / accessibilité) du brief mentionne explicitement que des utilisatrices souffrant de déficiences visuelles légères doivent pouvoir utiliser l'application confortablement. Un mode sombre à contraste élevé est l'une des réponses standard à cette exigence.
 
