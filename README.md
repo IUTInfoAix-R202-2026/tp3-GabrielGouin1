@@ -102,7 +102,11 @@ Quelques exemples concrets, extraits du TP :
 
 **Objectif** : écrire une vue FXML minimale, puis l'afficher dans une fenêtre depuis le code Java.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette PremiereVueFXML](src/main/resources/assets/maquette_premiere_vue.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus) :
 
 <img alt="Résultat attendu - Exercice 1 : une vue FXML minimale (titre, texte, bouton) affichée dans une fenêtre" src=".github/assets/apercu-ex1-premiere-vue.png" width="420"/>
 
@@ -184,7 +188,11 @@ Quand un attribut vous est inconnu, ouvrez la [Javadoc JavaFX 25](https://openjf
 
 **Objectif** : associer un **contrôleur Java** à une vue FXML, injecter les composants via `@FXML` et réagir à un `onAction`.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette CompteurFXML](src/main/resources/assets/maquette_compteur.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus) :
 
 <img alt="Résultat attendu - Exercice 2 : un compteur FXML avec boutons +, - et Réinitialiser pilotés par le contrôleur" src=".github/assets/apercu-ex2-compteur.png" width="360"/>
 
@@ -241,7 +249,11 @@ private final IntegerProperty compteur = new SimpleIntegerProperty(0);
 
 **Objectif** : construire un formulaire complet en FXML (`GridPane` + `Label` + `TextField` + `Button`), lui appliquer une **feuille CSS**, et écrire les **bindings de validation** dans le contrôleur.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette FormulaireConnexionFXML](src/main/resources/assets/maquette_formulaire_connexion.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus) :
 
 <img alt="Résultat attendu - Exercice 3 : formulaire de connexion stylé en CSS, bouton activé par les bindings de validation" src=".github/assets/apercu-ex3-formulaire.png" width="360"/>
 
@@ -304,7 +316,11 @@ private final IntegerProperty compteur = new SimpleIntegerProperty(0);
 
 **Objectif** : construire la **coquille** d'une application JavaFX complète en FXML : `BorderPane` avec un `MenuBar` en haut, une zone centrale dynamique, et une barre de statut en bas.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette CoquilleAccueil](src/main/resources/assets/maquette_coquille.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus) :
 
 <img alt="Résultat attendu - Exercice 4 : coquille BorderPane (MenuBar en haut, zone centrale, barre de statut en bas)" src=".github/assets/apercu-ex4-coquille.png" width="640"/>
 
@@ -350,7 +366,11 @@ Notez que **`onQuitter` n'a pas de test associé** : la fermeture de la fenêtre
 
 **Objectif** : créer un **composant graphique réutilisable** : une **tuile récapitulative de site** avec numéro de carré, nom, badge de fraîcheur coloré, et statistiques (c'est l'objet introduit dans le tableau SAÉ en haut du TP). La tuile expose des **propriétés observables** auxquelles l'utilisateur peut se brancher en Java.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette SiteCarte](src/main/resources/assets/maquette_site_carte.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus — la démo empile trois tuiles, une par état de badge) :
 
 <img alt="Résultat attendu - Exercice 5 : une tuile SiteCarte (numéro de carré, nom, badge de fraîcheur, statistiques)" src=".github/assets/apercu-ex5-sitecarte.png" width="680"/>
 
@@ -420,7 +440,11 @@ Notez que **`onQuitter` n'a pas de test associé** : la fermeture de la fenêtre
 
 **Objectif** : composer une application à partir de **deux sous-vues FXML** chacune avec son propre contrôleur. Faire dialoguer les sous-contrôleurs via un contrôleur parent.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette VueAccueil](src/main/resources/assets/maquette_vue_accueil.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus — au démarrage la liste est vide, chaque clic « + Nouveau site » ajoute une tuile) :
 
 <img alt="Résultat attendu - Exercice 6 : la vue d'accueil composée par fx:include (en-tête + liste de sites)" src=".github/assets/apercu-ex6-vueaccueil.png" width="700"/>
 
@@ -484,7 +508,11 @@ Notez que **`onQuitter` n'a pas de test associé** : la fermeture de la fenêtre
 
 **Objectif** : faire converger tous les apports du TP3 sur un cas d'usage **réel de la SAÉ** : la vérification par échantillonnage d'une nuit de capture (parcours [P3 du brief](https://github.com/IUTInfoAix-S201/brief)).
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette Qualification](src/main/resources/assets/maquette_qualification.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus) :
 
 <img alt="Résultat attendu - Exercice 7 : écran de vérification d'une nuit (tableau de séquences + panneau de qualification)" src=".github/assets/apercu-ex7-qualification.png" width="720"/>
 
@@ -573,7 +601,11 @@ Les bonus sont **facultatifs** et **non notés** : à faire si vous avez termin�
 
 **Objectif** : démontrer le **theming CSS dynamique** d'une application JavaFX. Un `ToggleButton` bascule entre `theme-clair.css` et `theme-sombre.css` en remplaçant la feuille active de la scène (`scene.getStylesheets().setAll(...)`). Aucune reconstruction de la scène, aucun redémarrage : la transition est instantanée.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette ThemeToggle](src/main/resources/assets/maquette_theme_toggle.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus) :
 
 <img alt="Résultat attendu - Bonus 8 : une fenêtre avec un ToggleButton qui bascule le thème clair / sombre" src=".github/assets/apercu-bonus8-theme.png" width="480"/>
 
@@ -583,7 +615,11 @@ Les bonus sont **facultatifs** et **non notés** : à faire si vous avez termin�
 
 **Objectif** : prendre en main [**SceneBuilder**](https://gluonhq.com/products/scene-builder/), l'éditeur graphique de référence pour FXML. Vous reprenez la coquille de l'exercice 4, mais cette fois en **glissant-déposant** les composants depuis la palette SceneBuilder plutôt qu'en éditant le XML à la main.
 
-**Résultat attendu** (la coquille de l'ex4, reconstruite à SceneBuilder) **:**
+**Maquette attendue** (identique à celle de l'exercice 4 : c'est la même coquille, reconstruite autrement) **:**
+
+![Maquette CoquilleAccueil](src/main/resources/assets/maquette_coquille.svg)
+
+**Le rendu final** (la coquille de l'ex4, reconstruite à SceneBuilder) **:**
 
 <img alt="Résultat attendu - Bonus 9 : la coquille reconstruite avec SceneBuilder" src=".github/assets/apercu-bonus9-scenebuilder.png" width="640"/>
 
@@ -593,7 +629,11 @@ Ce bonus est **purement formatif** : il n'y a pas de test associé, parce que la
 
 **Objectif** : refaire une pierre angulaire MVC, cette fois sur un cas **ludique** (un plateau d'Othello 8x8 jouable à deux joueurs), en complément de la pierre angulaire métier de l'exercice 7. Une fois terminé, votre application permettra de jouer une partie complète : capture des pions adverses encadrés dans les 8 directions, passage de tour automatique quand un joueur n'a pas de coup légal, détection de fin de partie, affichage du vainqueur.
 
-**Résultat attendu :**
+**Maquette attendue :**
+
+![Maquette Othello](src/main/resources/assets/maquette_othello.svg)
+
+**Le rendu final** (à comparer avec la maquette ci-dessus) :
 
 <img alt="Résultat attendu - Bonus 10 : un plateau d'Othello 8x8 jouable, avec coups légaux mis en évidence et score" src=".github/assets/apercu-bonus10-othello.png" width="460"/>
 
