@@ -573,12 +573,7 @@ Notez que **`onQuitter` n'a pas de test associé** : la fermeture de la fenêtre
 - La **convention JavaBeans** pour exposer une propriété observable : `xxxProperty()` (la propriété), `getXxx()` (lecture), `setXxx(...)` (écriture). C'est ce triplet que les outils, les bindings et l'écosystème JavaFX attendent. Le composant en expose ici **cinq** au lieu d'une au TP2, et tous les types se mélangent (String, Integer).
 - `ChangeListener` (TP2 CM2 #32-35) : on en pose un sur `joursDepuisDernierPassage` pour déclencher `majBadge(...)` à chaque modification.
 
-```mermaid
-flowchart LR
-    M["modèle<br/>(jours)"] -->|écouteur| C["majBadge(jours)"]
-    C -->|"remove/add"| S[styleClass]
-    S -->|"CSS"| V[apparence]
-```
+<img alt="Mise à jour du badge : un ChangeListener sur joursDepuisDernierPassage appelle majBadge, qui échange la classe CSS (removeAll puis add) ; c'est le CSS qui peint l'apparence" src=".github/assets/ex5-mise-a-jour-badge.svg"/>
 
 **Lien SAÉ** : chaque site Vigie-Chiro déclaré dans l'application sera rendu sous forme d'une telle tuile sur l'écran d'accueil. La couleur du badge (vert / orange / gris) permet à l'utilisateur de repérer instantanément quels sites ont été traités récemment et lesquels traînent.
 
@@ -643,16 +638,7 @@ flowchart LR
 - L'**injection automatique des sous-contrôleurs** dans le contrôleur parent : pour chaque `fx:include` portant `fx:id="enTete"`, le parent reçoit deux champs `@FXML` : `enTete` (le nœud racine de la sous-vue) et `enTeteController` (l'instance de son contrôleur). Le suffixe `Controller` est figé : c'est la constante `FXMLLoader.CONTROLLER_SUFFIX` (`public static final String`), concaténée littéralement au `fx:id`. Pas paramétrable.
 - L'**indépendance** des sous-contrôleurs : `EnTeteController` ne sait pas que `ListeSitesController` existe. C'est `VueAccueilController` qui les connecte. Cette discipline rend chaque brique testable isolément.
 
-```mermaid
-flowchart TB
-    P["VueAccueilController<br/>(parent)"]
-    P --> E["EnTeteController<br/>(en-tête)"]
-    P --> L["ListeSitesController<br/>(liste)"]
-    E -. clic bouton .-> P
-    P -. ajouter site .-> L
-    L -. nouveau total .-> P
-    P -. mettreAJourCompteur .-> E
-```
+<img alt="Dialogue des contrôleurs : VueAccueilController (parent) relie EnTeteController et ListeSitesController, qui s'ignorent mutuellement (clic bouton, ajouter site, nouveau total, mettreAJourCompteur)" src=".github/assets/ex6-dialogue-controleurs.svg"/>
 
 **Lien SAÉ** : on assemble ici la tuile `SiteCarte` (exercice 5) à l'intérieur d'un panneau liste, surmonté d'un en-tête (titre + bouton « + Nouveau site »). C'est exactement la composition M-Sites du brief Vigie-Chiro.
 
@@ -711,11 +697,7 @@ flowchart TB
 
 <img alt="Résultat attendu - Exercice 7 : écran de vérification d'une nuit (tableau de séquences + panneau de qualification)" src=".github/assets/apercu-ex7-qualification.png" width="720"/>
 
-```mermaid
-flowchart LR
-    M["modèle<br/>NuitVerification<br/>+ ObservableList Sequence"] <--> C["contrôleur<br/>QualificationController"]
-    C <--> V["vue FXML<br/>SplitPane / TableView<br/>+ panneau de détail"]
-```
+<img alt="Architecture MVC : le modèle NuitVerification (+ ObservableList de Sequence), le contrôleur QualificationController et la vue FXML (SplitPane / TableView + panneau de détail) communiquent par propriétés observables et événements" src=".github/assets/ex7-mvc.svg"/>
 
 **Ce que vous allez découvrir** :
 - L'architecture **MVC stricte** annoncée à la note d'ex 2 : trois fichiers, trois responsabilités. Le modèle (`Sequence`, `NuitVerification`) **ne dépend pas** de JavaFX au-delà des propriétés observables. La vue (`QualificationView.fxml`) ne contient aucun comportement. Le contrôleur fait le pont.
