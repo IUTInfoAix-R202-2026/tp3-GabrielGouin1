@@ -21,6 +21,7 @@
         <!-- Java & JavaFX versions -->
         <maven.compiler.release>25</maven.compiler.release>
         <javafx.version>25</javafx.version>
+        <javafx.mainClass>tp3.javafx/fr.univ_amu.iut.App</javafx.mainClass>
 
         <!-- Plugin versions -->
         <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
@@ -155,7 +156,7 @@
                 <configuration>
                     <jlinkImageName>app</jlinkImageName>
                     <launcher>launcher</launcher>
-                    <mainClass>tp3.javafx/fr.univ_amu.iut.App</mainClass>
+                    <mainClass>${javafx.mainClass}</mainClass>
                     <options>
                         <option>--enable-native-access=javafx.graphics</option>
                     </options>
